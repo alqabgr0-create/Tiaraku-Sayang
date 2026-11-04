@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terima Kasih, Sayang ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #10090d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+    radial-gradient(circle at top, #49172c, transparent 55%),
+    linear-gradient(140deg, #10090d, #210e19, #10090d);
+    z-index: -2;
+}
+
+.heart {
+    position: fixed;
+    color: #d65a7b;
+    opacity: .25;
+    animation: float 9s linear infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0);
+        opacity: 0;
+    }
+    20% { opacity: .3; }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding: 75px 22px;
+    text-align: center;
+}
+
+.small {
+    color: #d8a66a;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 8vw, 65px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #f5d6a6;
+}
+
+h1 span {
+    color: #d66c87;
+    font-style: italic;
+}
+
+.line {
+    width: 65px;
+    height: 2px;
+    background: #c99a5c;
+    margin: 30px auto;
+}
+
+.subtitle {
+    color: #c6b5bd;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.card {
+    margin-top: 50px;
+    padding: 35px 28px;
+    border: 1px solid rgba(215,166,106,.35);
+    border-radius: 18px;
+    background: rgba(255,255,255,.035);
+    box-shadow: 0 15px 60px #0008;
+    text-align: left;
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #e5b77e;
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.card p {
+    color: #e1d4da;
+    font-size: 14px;
+    line-height: 2.2;
+    margin-bottom: 18px;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #e9b5c4;
+    font-style: italic;
+}
+
+.signature {
+    text-align: right;
+    color: #d9ad75;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+.button {
+    margin-top: 35px;
+    padding: 14px 30px;
+    border: 1px solid #d5a46c;
+    background: transparent;
+    color: #f2d2a6;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #d5a46c;
+    color: #180d13;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    background: #391a29;
+    color: #f3d5df;
+    line-height: 2;
+    font-size: 14px;
+    animation: appear 1s;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.big-heart {
+    font-size: 35px;
+    margin-top: 35px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    0%,100% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+}
+
+footer {
+    margin-top: 70px;
+    color: #987c88;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<script>
+for(let i = 0; i < 20; i++){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+    heart.style.left = Math.random()*100 + "%";
+    heart.style.animationDuration = (5 + Math.random()*8) + "s";
+    heart.style.animationDelay = Math.random()*8 + "s";
+    heart.style.fontSize = (12 + Math.random()*20) + "px";
+    document.body.appendChild(heart);
+}
+</script>
+
+<div class="container">
+
+    <div class="small">A LETTER FROM MY HEART</div>
+
+    <h1>
+        Terima Kasih,<br>
+        <span>Tiaraku.</span>
+    </h1>
+
+    <div class="line"></div>
+
+    <p class="subtitle">
+        Untuk seseorang yang selalu ada,<br>
+        bahkan ketika dunia terasa tidak baik-baik saja.
+    </p>
+
+    <div class="card">
+
+        <h2>Untuk Kamu yang Istimewa</h2>
+
+        <p>
+            Aku mungkin bukan seseorang yang memiliki segalanya.
+            Aku juga bukan orang yang sempurna. Masih banyak
+            kekurangan dan masih banyak hal yang belum bisa aku berikan.
+        </p>
+
+        <p>
+            Tapi ada satu hal yang selalu ingin aku sampaikan,
+            <span class="highlight">
+            terima kasih sudah memilih untuk tetap bersamaku.
+            </span>
+        </p>
+
+        <p>
+            Terima kasih karena sudah menemani perjalanan ini
+            dari titik nol. Dari saat aku belum punya apa-apa,
+            dari saat semuanya masih sulit, dan dari saat aku
+            bahkan belum tahu bagaimana masa depan kita nanti.
+        </p>
+
+        <p>
+            Terima kasih sudah menerima aku apa adanya.
+            Bukan hanya melihat kelebihanku, tetapi juga tetap
+            menerima segala kekurangan dan ketidaksempurnaanku.
+        </p>
+
+        <p>
+            Mungkin perjalanan kita tidak selalu mudah.
+            Ada hari ketika kita tertawa, ada hari ketika kita
+            menangis, bahkan ada saat ketika keadaan membuat
+            kita hampir menyerah.
+        </p>
+
+        <p>
+            Tapi percayalah, kehadiranmu adalah salah satu hal
+            terbaik yang pernah datang dalam hidupku.
+            Kamu bukan hanya seseorang yang menemaniku,
+            tetapi juga seseorang yang membuatku ingin terus
+            berjuang menjadi lebih baik.
+        </p>
+
+        <p>
+            Aku tidak tahu seberapa jauh perjalanan kita nanti.
+            Aku juga tidak bisa menjanjikan hidup yang selalu
+            mudah. Namun, aku ingin terus berusaha, tumbuh,
+            dan membangun semuanya bersamamu.
+        </p>
+
+        <p>
+            <span class="highlight">
+            Jika suatu hari nanti aku berhasil menjadi seseorang,
+            ingatlah bahwa kamu adalah bagian dari perjalanan
+            yang membawaku sampai di sana.
+            </span>
+        </p>
+
+        <p>
+            Terima kasih sudah percaya kepadaku ketika mungkin
+            aku sendiri masih sering meragukan diriku.
+            Terima kasih sudah bertahan, sudah tulus,
+            dan sudah mencintaiku dengan segala kekuranganku.
+        </p>
+
+        <p>
+            Aku bersyukur karena dipertemukan denganmu.
+            Semoga aku juga bisa menjadi tempat pulang yang
+            nyaman untukmu, seperti kamu yang selalu menjadi
+            alasan aku ingin pulang.
+        </p>
+
+        <p>Aku juga tidak ingin melupakan perjalanan kecil kita
+        kemarin, saat kita menghabiskan waktu bersama di Blok M. Mungkin bagi orang lain itu hanyalah liburan biasa,
+        tetapi bagiku ada banyak kebahagiaan yang tersimpan di sana.</p>
+
+      <p>Sayangg, aku bener bahagia banget bisa jalanin berdua bareng kamu, kalo kamu bisa rasain apa yang aku rasain sekarang, jujur seneng banget, aku sampe sampe gabisa lupain apa yang kita lakuin di jam itu.</p>
+
+      <p>Makasih yakk sayangkuu cintakuu udah mau buat aku sebahagia ini aku baru pertama kali ngerasain liburan bareng orang yang aku sayang, jujur aja aku ga mikirin uang yang udah aku keluarin dan aku gapernah nyesel ngeluarin uang banyak demi orang yang aku cinta malah aku seneng liat kamu senyum.</p>
+
+      <p>Terimakasih semua yang udah kamu kasih yak sayangg.</p>
+
+      <p>I LOVE YOU SAYANG :3</p>
+
+        <div class="signature">
+            Dengan penuh cinta,<br>
+            Alqa Terganteng Slebew ❤️
+        </div>
+
+    </div>
+
+    <div class="big-heart">❤️</div>
+
+    <button class="button" onclick="showMessage()">
+        Buka Pesan Rahasia ♡
+    </button>
+
+    <div class="hidden-message" id="secret">
+        Jangan pernah pergi yak sayang, aku takut banget buat kehilangan kamu lagi, aku gamau keulang lagi masalah yang kemarin kemarin. Tetapi walaupun kamu udah lakuin seperti itu, aku tidak akan pernah balas dendam dan rasa benci ke kamu, aku bakal selalu jaga kamu dimanapun dan kapanpun itu.
+
+        <br><br>
+
+        Terima kasih sudah menjadi bagian dari hidupku. Save alqa yang cuman takut demam slebew.
+        <br>
+        <strong>Semoga kali ini, kita adalah selamanya. ❤️</strong>
+    </div>
+
+    <footer>
+        MADE WITH LOVE, JUST FOR TIARA CANTIKNYA AKU
+        <br><br>
+        © 2026 — DARI ALQA TERGANTENG
+    </footer>
+
+</div>
+
+<script>
+function showMessage(){
+    let message = document.getElementById("secret");
+
+    if(message.style.display === "block"){
+        message.style.display = "none";
+    } else {
+        message.style.display = "block";
+        message.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
+</script>
+
+</body>
+</html>
